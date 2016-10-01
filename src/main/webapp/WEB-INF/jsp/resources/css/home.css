@@ -1,0 +1,23 @@
+.home {
+    font-size: 80px;
+    line-height: 85px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #333333;
+    padding-top: 15%;
+}
+
+input {
+    font-size: 30px;
+    line-height: 35px
+}
+
+body {
+    background-color: #99a6ff;
+}
+
+form {
+    font-size: 50px;
+    line-height: 55px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: black
+}

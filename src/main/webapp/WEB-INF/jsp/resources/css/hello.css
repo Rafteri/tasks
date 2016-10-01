@@ -1,0 +1,10 @@
+.hello {
+    font-size: 80px;
+    line-height: 85px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: black;
+    padding-top: 15%;
+}
+body {
+    background-color: #99a6ff;
+}

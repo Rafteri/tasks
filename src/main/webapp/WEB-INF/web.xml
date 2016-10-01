@@ -15,4 +15,12 @@
     <welcome-file-list>
         <welcome-file>/WEB-INF/jsp/home.jsp</welcome-file>
     </welcome-file-list>
+    <filter>
+        <filter-name>hello-filter</filter-name>
+        <filter-class>com.fsep.servlet.filter.HelloFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>hello-filter</filter-name>
+        <servlet-name>hello</servlet-name>
+    </filter-mapping>
 </web-app>
