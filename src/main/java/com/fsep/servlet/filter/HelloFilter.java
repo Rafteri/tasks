@@ -14,7 +14,7 @@ public class HelloFilter implements Filter {
     }
 
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        String name = new String(servletRequest.getParameter("name").getBytes("ISO-8859-1"),"UTF-8");
+        String name = servletRequest.getParameter("name");
         name = name == null || name.length() == 0 ? "стесняшка" : name.trim();
         System.out.println("Имя пользователя: " + name);
         filterChain.doFilter(servletRequest,  servletResponse);
