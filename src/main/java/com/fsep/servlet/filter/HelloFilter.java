@@ -1,5 +1,7 @@
 package com.fsep.servlet.filter;
 
+import com.fsep.DAO.NameDao;
+
 import javax.servlet.*;
 import java.io.IOException;
 
@@ -10,12 +12,17 @@ import java.io.IOException;
  * @version 1.0
  */
 public class HelloFilter implements Filter {
+
     public void init(FilterConfig filterConfig) throws ServletException {
     }
 
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         String name = servletRequest.getParameter("name");
-        name = name == null || name.length() == 0 ? "стесняшка" : name.trim();
+        if (name != null && name.trim().length() != 0) {
+            NameDao.addName(name);
+        } else {
+            name = "стесняшка";
+        }
         System.out.println("Имя пользователя: " + name);
         filterChain.doFilter(servletRequest,  servletResponse);
     }

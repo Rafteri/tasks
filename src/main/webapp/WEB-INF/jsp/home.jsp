@@ -5,6 +5,9 @@
     <style>
         <%@include file="resources/css/home.css" %>
     </style>
+    <script>
+        <%@include file="resources/js/home.js" %>
+    </script>
     <title>Введите имя</title>
 </head>
 <body>
@@ -13,7 +16,8 @@
         <td align="center" class="home">
             <form action="/hello">
                 Пожалуйста, введите ваше имя: <br>
-                <input autofocus="autofocus" type="text" spellcheck="true" name="name">
+                <span class="error hidden" id="error-message">Это имя занято!</span> <br>
+                <input autofocus="autofocus" type="text" spellcheck="true" name="name" onkeyup="isExists(this.value)">
                 <input type="submit" value="ввод">
             </form>
         </td>

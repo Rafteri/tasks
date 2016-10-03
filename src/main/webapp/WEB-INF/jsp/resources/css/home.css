@@ -21,3 +21,9 @@ form {
     font-family: Helvetica, Arial, sans-serif;
     color: black
 }
+.error {
+    color: #bf0029;
+}
+.hidden {
+    display : none;
+}

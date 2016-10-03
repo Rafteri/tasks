@@ -4,17 +4,28 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
       http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    <!-- Servlets -->
     <servlet>
         <servlet-name>hello</servlet-name>
         <servlet-class>com.fsep.servlet.HelloServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>liveSearch</servlet-name>
+        <servlet-class>com.fsep.servlet.LiveSearchServlet</servlet-class>
+    </servlet>
+    <!-- Servlets mapping -->
     <servlet-mapping>
         <servlet-name>hello</servlet-name>
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>liveSearch</servlet-name>
+        <url-pattern>/check</url-pattern>
+    </servlet-mapping>
     <welcome-file-list>
         <welcome-file>/WEB-INF/jsp/home.jsp</welcome-file>
     </welcome-file-list>
+    <!-- Filters -->
     <filter>
         <filter-name>hello-filter</filter-name>
         <filter-class>com.fsep.servlet.filter.HelloFilter</filter-class>
